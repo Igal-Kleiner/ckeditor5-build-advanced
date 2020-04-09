@@ -55,7 +55,6 @@ import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import Title from '@ckeditor/ckeditor5-heading/src/title.js';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
-import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -109,8 +108,7 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	Title,
 	TodoList,
-	Underline,
-	WordCount
+	Underline
 ];
 
 // Editor configuration.
@@ -396,18 +394,132 @@ ClassicEditor.defaultConfig = {
 			'Verdana, Geneva, sans-serif'
 		]
 	},
+	fontSizeConfig: {
+		options: [ 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40 ]
+	},
+	heading: {
+		options: [
+			{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+			{ model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+			{ model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+			{ model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+			{ model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' }
+		]
+	},
 	table: {
 		contentToolbar: [
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells'
-		]
+			'mergeTableCells',
+			'|',
+			'bold',
+			'italic',
+			'strikethrough',
+			'fontBackgroundColor',
+			'fontColor'
+		],
+		tableCellProperties: {
+			borderColors: [
+				{
+					color: 'hsl(0, 0%, 0%)',
+					label: 'Black'
+				},
+				{
+					color: 'hsl(0, 0%, 30%)',
+					label: 'Dim grey'
+				},
+				{
+					color: 'hsl(0, 0%, 60%)',
+					label: 'Grey'
+				},
+				{
+					color: 'hsl(0, 0%, 90%)',
+					label: 'Light grey'
+				},
+				{
+					color: 'hsl(0, 0%, 100%)',
+					label: 'White',
+					hasBorder: true
+				}
+			],
+			backgroundColors: [
+				{
+					color: 'hsl(120, 75%, 60%)',
+					label: 'Light Green'
+				},
+				{
+					color: 'hsl(0, 75%, 60%)',
+					label: 'Light Red'
+				},
+				{
+					color: 'hsl(210, 75%, 60%)',
+					label: 'Light blue'
+				},
+				{
+					color: 'hsl(0, 0%, 60%)',
+					label: 'Grey'
+				},
+				{
+					color: 'hsl(0, 0%, 100%)',
+					label: 'White',
+					hasBorder: true
+				}
+			]
+		},
+		tableProperties: {
+			borderColors: [
+				{
+					color: 'hsl(0, 0%, 0%)',
+					label: 'Black'
+				},
+				{
+					color: 'hsl(0, 0%, 30%)',
+					label: 'Dim grey'
+				},
+				{
+					color: 'hsl(0, 0%, 60%)',
+					label: 'Grey'
+				},
+				{
+					color: 'hsl(0, 0%, 90%)',
+					label: 'Light grey'
+				},
+				{
+					color: 'hsl(0, 0%, 100%)',
+					label: 'White',
+					hasBorder: true
+				}
+			],
+			backgroundColors: [
+				{
+					color: 'hsl(120, 75%, 60%)',
+					label: 'Light Green'
+				},
+				{
+					color: 'hsl(0, 75%, 60%)',
+					label: 'Light Red'
+				},
+				{
+					color: 'hsl(210, 75%, 60%)',
+					label: 'Light blue'
+				},
+				{
+					color: 'hsl(0, 0%, 60%)',
+					label: 'Grey'
+				},
+				{
+					color: 'hsl(0, 0%, 100%)',
+					label: 'White',
+					hasBorder: true
+				}
+			]
+		}
 	},
 	link: {
 		decorators: {
 			addTargetToLinks: {
 				mode: 'manual',
-				label: 'Open in new tab (_blank, no-follow)',
+				label: 'Open in a new tab (_blank, no-follow)',
 				attributes: {
 					target: '_blank',
 					rel: 'noopener noreferrer nofollow'

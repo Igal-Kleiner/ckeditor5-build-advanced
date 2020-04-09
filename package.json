@@ -52,7 +52,6 @@
     "@ckeditor/ckeditor5-special-characters": "^18.0.0",
     "@ckeditor/ckeditor5-table": "^18.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^18.0.0",
-    "@ckeditor/ckeditor5-word-count": "^18.0.0",
     "ckeditor5-upload-strapi": "^1.0.2",
     "eslint": "^5.5.0",
     "eslint-config-ckeditor5": "^2.0.0",
