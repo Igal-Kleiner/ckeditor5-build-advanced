@@ -11,7 +11,7 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder.js';
-import CKFinderUploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter.js';
+// import CKFinderUploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter.js';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
@@ -61,14 +61,13 @@ export default class AdvancedEditor extends ClassicEditorBase {}
 // Plugins to include in the build.
 AdvancedEditor.builtinPlugins = [
 	Essentials,
-	UploadAdapter,
 	Alignment,
 	Autoformat,
 	Bold,
 	Italic,
 	BlockQuote,
 	CKFinder,
-	CKFinderUploadAdapter,
+	// CKFinderUploadAdapter,
 	EasyImage,
 	FontBackgroundColor,
 	FontColor,
@@ -108,7 +107,8 @@ AdvancedEditor.builtinPlugins = [
 	TableToolbar,
 	Title,
 	TodoList,
-	Underline
+	Underline,
+	UploadAdapter
 ];
 
 // Editor configuration.

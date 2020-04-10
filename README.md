@@ -1,5 +1,6 @@
-CKEditor 5 classic editor build
+CKEditor 5 advanced editor build
 ========================================
+Based on # [CKEditor 5 classic editor build](https://github.com/JelmerV-WFC/ckeditor5-build-classic) by [JelmerV-WFC] https://github.com/JelmerV-WFC
 
 [![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)
 [![Build Status](https://travis-ci.org/ckeditor/ckeditor5-build-classic.svg?branch=master)](https://travis-ci.org/ckeditor/ckeditor5-build-classic)
