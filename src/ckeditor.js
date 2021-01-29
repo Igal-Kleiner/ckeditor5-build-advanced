@@ -127,12 +127,41 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		toolbar: [
+			'imageResize',
+			'|',
 			'imageStyle:full',
 			'imageStyle:side',
+			'imageStyle:alignLeft',
+			'imageStyle:alignCenter',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
 		],
-		resizeUnit: 'px'
+		resizeUnit: '%',
+		resizeOptions: [ {
+			name: 'imageResize:original',
+			value: null,
+			icon: 'original',
+			label: 'Original size'
+		},
+		{
+			name: 'imageResize:25',
+			value: '25',
+			icon: 'small',
+			label: 'Small size'
+		},
+		{
+			name: 'imageResize:50',
+			value: '50',
+			icon: 'medium',
+			label: 'Medium size'
+		},
+		{
+			name: 'imageResize:75',
+			value: '75',
+			icon: 'large',
+			label: 'Large size'
+		} ]
 	},
 	table: {
 		contentToolbar: [
