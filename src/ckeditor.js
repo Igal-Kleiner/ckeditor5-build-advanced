@@ -136,22 +136,26 @@ ClassicEditor.defaultConfig = {
 			{
 				name: 'imageResize:original',
 				value: null,
-				label: 'Original'
+				label: 'Original',
+				icon: 'original'
 			},
 			{
 				name: 'imageResize:50',
 				value: '25',
-				label: '25%'
+				label: '25%',
+				icon: 'small'
 			},
 			{
 				name: 'imageResize:50',
 				value: '50',
-				label: '50%'
+				label: '50%',
+				icon: 'medium'
 			},
 			{
 				name: 'imageResize:75',
 				value: '75',
-				label: '75%'
+				label: '75%',
+				icon: 'large'
 			}
 		],
 		toolbar: [
@@ -161,7 +165,7 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:alignCenter',
 			'imageStyle:alignRight',
 			'|',
-			'imageResize',
+			'imageResize:25', 'imageResize:50', 'imageResize:75', 'imageResize:original',
 			'|',
 			'imageTextAlternative'
 		]
