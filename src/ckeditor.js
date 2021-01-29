@@ -131,6 +131,27 @@ ClassicEditor.defaultConfig = {
 		styles: [
 			'full', 'side', 'alignLeft', 'alignCenter', 'alignRight'
 		],
+		resizeUnit: '%',
+		resizeOptions: [ {
+			name: 'imageResize:original',
+			value: null,
+			label: 'Original size'
+		},
+		{
+			name: 'imageResize:25',
+			value: '25',
+			label: '25%'
+		},
+		{
+			name: 'imageResize:50',
+			value: '50',
+			label: '50%'
+		},
+		{
+			name: 'imageResize:75',
+			value: '75',
+			label: '75%'
+		} ],
 		toolbar: [
 			'imageResize',
 			'|',
@@ -141,32 +162,7 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
-		],
-		resizeUnit: '%',
-		resizeOptions: [ {
-			name: 'imageResize:original',
-			value: null,
-			icon: 'original',
-			label: 'Original size'
-		},
-		{
-			name: 'imageResize:25',
-			value: '25',
-			icon: 'small',
-			label: 'Small size'
-		},
-		{
-			name: 'imageResize:50',
-			value: '50',
-			icon: 'medium',
-			label: 'Medium size'
-		},
-		{
-			name: 'imageResize:75',
-			value: '75',
-			icon: 'large',
-			label: 'Large size'
-		} ]
+		]
 	},
 	table: {
 		contentToolbar: [
