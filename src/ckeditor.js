@@ -20,6 +20,7 @@ import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
@@ -61,6 +62,7 @@ ClassicEditor.builtinPlugins = [
 	HorizontalLine,
 	Image,
 	ImageCaption,
+	ImageResize,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
@@ -126,6 +128,9 @@ ClassicEditor.defaultConfig = {
 		options: [ 'left', 'right', 'center', 'justify' ]
 	},
 	image: {
+		styles: [
+			'full', 'side', 'alignLeft', 'alignCenter', 'alignRight'
+		],
 		toolbar: [
 			'imageResize',
 			'|',
